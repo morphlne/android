@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Android Basics with Compose - Portfolio</title>
+  <link rel="icon" type="image/svg" href="favicon.svg">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <h1>Android Basics with Compose</h1>
+        <p class="subtitle">Portfolio of Android apps built with Kotlin and Jetpack Compose</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container projects-list">
+    <!-- 1 -->
+    <article class="project-card">
+      <h2 class="project-title">
+        Basic tutorials: 
+        <a href="https://github.com/morphlne/android/tree/master/U01_03_TaskManager" target="_blank" rel="noopener noreferrer">
+          TaskManager</a>
+        <a href="https://github.com/morphlne/android/tree/master/U01_04_Quadrant" target="_blank" rel="noopener noreferrer">
+          Quadrant</a>
+        <a href="https://github.com/morphlne/android/tree/master/U01_05_BusinessCard" target="_blank" rel="noopener noreferrer">
+          BusinessCard</a>
+      </h2>
+      <p class="project-desc">Simple one-screen apps</p>
+      <div class="badges">
+        <span class="badge">Text</span>
+        <span class="badge">Image</span>
+        <span class="badge">Column</span>
+        <span class="badge">Row</span>
+        <span class="badge">Box</span>
+        <span class="badge">Alignment</span>
+        <span class="badge">Arrangement</span>
+        <span class="badge">FontWeight</span>
+        <span class="badge">Layout Weight</span>
+        <span class="badge">Icon</span>
+        <span class="badge">Material Icons</span>
+      </div>
+      <div class="screenshots-grid">
+        <figure class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="images/u01_03_task_manager.png" alt="Completed State" />
+          </div>
+          <figcaption class="screenshot-caption">Completed State</figcaption>
+        </figure>
+        <figure class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="images/u01_04_quadrant.png" alt="Four Quadrants" />
+          </div>
+          <figcaption class="screenshot-caption">Four Quadrants</figcaption>
+        </figure>
+        <figure class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="images/u01_05_card.png" alt="Profile & Contacts" />
+          </div>
+          <figcaption class="screenshot-caption">Profile & Contacts</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <h2 class="project-title">
+        <a href="https://github.com/morphlne/android/tree/master/U02_01_DiceRoller" target="_blank" rel="noopener noreferrer">
+          DiceRoller
+        </a>
+      </h2>
+      <p class="project-desc">Added user interaction to roll a virtual dice and update the screen image.</p>
+      <div class="badges">
+        <span class="badge">Button</span>
+        <span class="badge">remember</span>
+        <span class="badge">mutableStateOf</span>
+      </div>
+      <div class="screenshots-grid">
+        <figure class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="images/u02_01_dice1.png" alt="Initial State" />
+          </div>
+          <figcaption class="screenshot-caption">Initial State</figcaption>
+        </figure>
+        <figure class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="images/u02_01_dice2.png" alt="Rolled Result" />
+          </div>
+          <figcaption class="screenshot-caption">Rolled Result</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <h2 class="project-title">
+        <a href="https://github.com/morphlne/android/tree/master/U02_03_TipCalculator" target="_blank" rel="noopener noreferrer">
+          TipCalculator
+        </a>
+      </h2>
+      <p class="project-desc">Created a tip calculator with text inputs, rounding toggle and unit tests.</p>
+      <div class="badges">
+        <span class="badge">TextField</span>
+        <span class="badge">Switch</span>
+        <span class="badge">State Hoisting</span>
+        <span class="badge">Unit Testing</span>
+      </div>
+      <div class="screenshots-grid">
+        <figure class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="images/u02_03_screen1.png" alt="Empty Form" />
+          </div>
+          <figcaption class="screenshot-caption">Empty Form</figcaption>
+        </figure>
+        <figure class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="images/u02_03_screen2.png" alt="Amount Entered" />
+          </div>
+          <figcaption class="screenshot-caption">Amount Entered</figcaption>
+        </figure>
+        <figure class="screenshot-item">
+          <div class="screenshot-frame">      
+            <img src="images/u02_03_screen3.png" alt="Tip Calculated" />
+          </div>
+          <figcaption class="screenshot-caption">Tip Calculated</figcaption>
+        </figure>
+        <figure class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="images/u02_03_screen4.png" alt="Round Up Enabled" />
+          </div>
+          <figcaption class="screenshot-caption">Round Up Enabled</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <h2 class="project-title">
+        <a href="https://github.com/morphlne/android/tree/master/U03_01_Affirmations" target="_blank" rel="noopener noreferrer">
+          Affirmations
+        </a>
+      </h2>
+      <p class="project-desc">Built a scrollable list of motivational cards with images and text.</p>
+      <div class="badges">
+        <span class="badge">LazyColumn</span>
+        <span class="badge">Card</span>
+        <span class="badge">ContentScale</span>
+      </div>
+      <div class="screenshots-grid">
+        <figure class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="images/u03_01_top.png" alt="Affirmations Feed" />
+          </div>
+          <figcaption class="screenshot-caption">Affirmations Feed</figcaption>
+        </figure>
+        <figure class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="images/u03_01_scroll.png" alt="Scrolled List" />
+          </div>
+          <figcaption class="screenshot-caption">Scrolled List</figcaption>
+        </figure>
+        <figure class="screenshot-item screenshot-item--landscape">
+          <div class="screenshot-frame">
+            <img src="images/u03_01_landscape.png" alt="Landscape Mode" />
+          </div>
+          <figcaption class="screenshot-caption">Landscape Mode</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <h2 class="project-title">
+        <a href="https://github.com/morphlne/android/tree/master/U03_03_Woof" target="_blank" rel="noopener noreferrer">
+          Woof
+        </a>
+      </h2>
+      <p class="project-desc">Made a dog profile list with expandable cards, custom theme and animations.</p>
+      <div class="badges">
+        <span class="badge">MaterialTheme</span>
+        <span class="badge">animateContentSize</span>
+        <span class="badge">TopAppBar</span>
+        <span class="badge">Custom Fonts</span>
+      </div>
+      <div class="screenshots-grid">
+        <figure class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="images/u03_03_light.png" alt="Light Theme List" />
+          </div>
+          <figcaption class="screenshot-caption">Light Theme List</figcaption>
+        </figure>
+        <figure class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="images/u03_03_expanded.png" alt="Expanded Card" />
+          </div>
+          <figcaption class="screenshot-caption">Expanded Card</figcaption>
+        </figure>
+        <figure class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="images/u03_03_dark.png" alt="Dark Theme" />
+          </div>
+          <figcaption class="screenshot-caption">Dark Theme</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <h2 class="project-title">
+        <a href="https://github.com/morphlne/android/tree/master/U05_01_RaceTracker" target="_blank" rel="noopener noreferrer">
+          RaceTracker
+        </a>
+      </h2>
+      <p class="project-desc">Simulated a live race between two players using coroutines and progress bars.</p>
+      <div class="badges">
+        <span class="badge">Kotlin Coroutines</span>
+        <span class="badge">LaunchedEffect</span>
+        <span class="badge">LinearProgressIndicator</span>
+      </div>
+      <div class="screenshots-grid">
+        <figure class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="images/u05_01_start.png" alt="Race Start" />
+          </div>
+          <figcaption class="screenshot-caption">Race Start</figcaption>
+        </figure>
+        <figure class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="images/u05_01_progress.png" alt="In Progress" />
+          </div>
+          <figcaption class="screenshot-caption">In Progress</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <h2 class="project-title">
+        <a href="https://github.com/morphlne/android/tree/master/U05_02_MarsPhotos" target="_blank" rel="noopener noreferrer">
+          MarsPhotos
+        </a>
+      </h2>
+      <p class="project-desc">Fetched real Mars rover photos from a REST API and displayed them in a grid.</p>
+      <div class="badges">
+        <span class="badge">Retrofit</span>
+        <span class="badge">Coil</span>
+        <span class="badge">Kotlin Serialization</span>
+        <span class="badge">Kotlin Coroutines</span>
+        <span class="badge">Dependency Injection</span>
+        <span class="badge">ViewModel</span>
+      </div>
+      <div class="screenshots-grid">
+        <figure class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="images/u05_02_gallery.png" alt="Mars Photos Grid" />
+          </div>
+          <figcaption class="screenshot-caption">Mars Photos Grid</figcaption>
+        </figure>
+        <figure class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="images/u05_02_loading.png" alt="Loading State" />
+          </div>
+          <figcaption class="screenshot-caption">Loading State</figcaption>
+        </figure>
+        <figure class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="images/u05_02_photo_error.png" alt="Corrupted Photo Placeholder" />
+          </div>
+          <figcaption class="screenshot-caption">Corrupted Photo Placeholder</figcaption>
+        </figure>
+        <figure class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="images/u05_02_error.png" alt="Network Error State" />
+          </div>
+          <figcaption class="screenshot-caption">Network Error State</figcaption>
+        </figure>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Built with plain HTML and CSS</p>
+    </div>
+  </footer>
+
+</body>
+</html>
