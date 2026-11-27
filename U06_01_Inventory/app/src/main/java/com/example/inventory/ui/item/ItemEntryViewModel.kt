@@ -25,17 +25,11 @@ class ItemEntryViewModel(private val itemsRepository: ItemsRepository) : ViewMod
      */
     fun updateUiState(itemDetails: ItemDetails) {
         itemUiState =
-            ItemUiState(itemDetails = itemDetails, isEntryValid = validateInput(itemDetails))
-    }
-
-    private fun validateInput(uiState: ItemDetails = itemUiState.itemDetails): Boolean {
-        return with(uiState) {
-            name.isNotBlank() && price.isNotBlank() && quantity.isNotBlank()
-        }
+            ItemUiState(itemDetails = itemDetails, isEntryValid = itemDetails.isValid())
     }
 
     suspend fun saveItem() {
-        if (validateInput()) {
+        if (itemUiState.itemDetails.isValid()) {
             itemsRepository.insertItem(itemUiState.itemDetails.toItem())
         }
     }
@@ -67,6 +61,14 @@ fun ItemDetails.toItem(): Item = Item(
     price = price.toDoubleOrNull() ?: 0.0,
     quantity = quantity.toIntOrNull() ?: 0
 )
+
+fun ItemDetails.isValid(): Boolean {
+    val parsedPrice = price.toDoubleOrNull()
+    val parsedQuantity = quantity.toIntOrNull()
+    return name.isNotBlank()
+            && parsedPrice != null && parsedPrice >= 0.0
+            && parsedQuantity != null && parsedQuantity >= 0
+}
 
 fun Item.formatedPrice(): String {
     return NumberFormat.getCurrencyInstance().format(price)

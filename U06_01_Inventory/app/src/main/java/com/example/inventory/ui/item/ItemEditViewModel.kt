@@ -36,23 +36,13 @@ class ItemEditViewModel(
         }
     }
 
-    private fun validateInput(uiState: ItemDetails = itemUiState.itemDetails): Boolean {
-        return with(uiState) {
-            val parsedPrice = price.toDoubleOrNull()
-            val parsedQuantity = quantity.toIntOrNull()
-            name.isNotBlank()
-                    && parsedPrice != null && parsedPrice >= 0.0
-                    && parsedQuantity != null && parsedQuantity >= 0
-        }
-    }
-
     fun updateUiState(itemDetails: ItemDetails) {
         itemUiState =
-            ItemUiState(itemDetails = itemDetails, isEntryValid = validateInput(itemDetails))
+            ItemUiState(itemDetails = itemDetails, isEntryValid = itemDetails.isValid())
     }
 
     suspend fun updateItem() {
-        if (validateInput(itemUiState.itemDetails)) {
+        if (itemUiState.itemDetails.isValid()) {
             itemsRepository.updateItem(itemUiState.itemDetails.toItem())
         }
     }
